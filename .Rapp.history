@@ -1,0 +1,350 @@
+countrydata = rbind(countrydata, newcountrydata)
+countrydata
+allcountrydata = rbind(country, newcountrydata)
+allcountrydata
+newcountrydata
+country
+defaults write org.R-project.R force.LANG en_US.UTF-8
+org.R-project.R force.LANG en_US.UTF-8
+system("defaults write org.R-project.R force.LANG en_US.UTF-8")
+data()
+co2
+pi
+Co2
+CO2
+codes = (380, 124, 818)
+codes = c(380, 124, 818)
+country = c("India", "Italy", "USA")
+country
+codes
+names(codes) = country
+codes
+country
+codes[1]
+codes[c(1,3)]
+seq(1,10)
+seq(1,10,3)
+1:10
+codes(india)
+codes("india")
+codes("India")
+codes(India)
+country("India")
+codes<-c(1,3,"canada")
+as.numeric(codes)
+as.character(codes)
+library(dplyr)
+install dplyr
+help(install)
+??install
+INSTALL dplyr
+INSTALL(dplyr)
+help(boxplot)
+a<-5
+if(a>5){}
+if(a>5){1/a}
+compute_s_n <- function(n){x<-1:n}
+?pnorm
+?quantile
+?pnorm
+?quantile
+?mad
+?function
+library(tidyverse)
+ggplot
+?ggplot
+beads<-rep(c("red", "blue"), times = c(2,3))
+beads
+sample(beads,1)
+sample(beads,10)
+sample(beads,5)
+sample(beads,6)
+sample(beads,3)
+b<-10000
+events<-replicate(b, sample(beads,1))
+events
+tab<-table(events)
+tab
+prop.table(tab)
+events<-sample(beads, b, replace = TRUE)
+events
+prop.table(table(events))
+?permutations
+paste(letters[1:5], as.character(1:5))
+expand.grid(pants = c("blue", "white", "black"), shirts = c("red", "orange", "white"))
+expand.grid(pants = c("blue"), shirts = c("red"))
+library(gtools)
+permutations(5, 2)
+?prod
+prod(3,2)
+install.packages("KernSmooth")
+install.packages("installr")
+x<-1:100
+x
+mean(x)
+stdev(x)
+std(x)
+attributes(x)
+class(x)
+xL
+y<-10
+y
+z<-10L
+z
+z<-10.50
+z
+z<-10.5L
+q()
+x<-0:9
+x
+x[[3]]
+as.logical(x)
+as.character(x)
+y<-c("a", "b")
+y
+as.numeric(y)
+x<-list(1, "a", True)
+x<-list(1, "a", TRUE)
+x
+x[[3]]
+exit
+clear
+m<-matrix(1:10, nrow=3, ncol = 3)
+m<-matrix(1:10, nrow=2, ncol = 3)
+m<-matrix(1:10, nrow=2, ncol = 5)
+m
+m<-matrix(1:9, nrow=3, ncol = 5)
+m<-matrix(1:9, nrow=3, ncol = 3)
+m
+m[[2,3]]
+m[[2,3]]*m[[3,2]]
+dim(m)
+m<-20:30
+dim(m<-c(2,5))
+dim(m)<-c(2,5))
+dim(m)<-c(2,5)
+dim(m)<-c(1,5)
+dim(m)<-c(2,5)
+m<-1:10
+dim(m)<-c(2,5)
+m
+x<-1:3
+y<-10:12
+cbind(x,y)
+rbind(x,y)
+install.packages("swirl")
+packageVersion("swirl")
+library(swirl)
+ls()
+rm(list=ls())
+swirl()
+5+7
+x<-5+7
+x
+y<-x-3
+y
+z<-c(1.1,9,3.14)
+?c
+z
+c(z,555,z)
+z*2+100
+my_sqrt<-sqrt(z-1)
+my_sqrt
+my_div<-z/my_sqrt
+my_div
+c(1,2,3,4)+c(0,10)
+c(1,2,3,4)+c(0,10,100)
+z*2+1000
+my_div
+swirl()
+getwd()
+ls()
+x<-9
+ls()
+list.files()
+?list.files
+x<-c("a", "b", "c", "d")
+for (i in 1:4) {}
+for (i in 1:4) {print(x[i])}
+for (i in seq_along(x)) {print(x[i])}
+for (letter in x) {print(x[i])}
+for (letter in x) {print(letter)}
+x<-matrix(1:6, 2, 3)
+for (i in seq_len(nrow(x))){for j in seq_len(ncol(x)) print(x[i, j])}
+for (i in seq_len(nrow(x))){for j in seq_len(ncol(x)) {print(x[i, j])}}
+library(datasets)#
+data(iris)
+?iris
+mean(iris[iris$Species == "virginica",]$Sepal.Length)
+apply(iris[, 1:4], 2, mean)
+library(datasets)#
+data(mtcars)
+?mtcars
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+mean(mtcars[mtcars$cyl == "8",]$hp) - mean(mtcars[mtcars$cyl == "4",]$hp)
+debug(ls)
+makeCacheMatrix <- function(x = matrix()) {#
+	  inv <- NULL#
+	  set <- function(y) {#
+	    x <<- y#
+	    inv <<- NULL#
+	  }#
+	  get <- function() x#
+	  setinv <- function(inverse) inv <<- inverse#
+	  getinv <- function() inv#
+	  list(set = set, get = get, setinv = setinv, getinv = getinv)#
+	}
+makeCacheMatrix <- function(x = matrix()) {#
+  i <- NULL#
+  set <- function(y) {#
+    x <<- y#
+    i <<- NULL#
+  }#
+  get <- function() x#
+  setinverse <- function(inverse) i <<- inverse#
+  getinverse <- function() i#
+  list(set = set, get = get,#
+       setinverse = setinverse,#
+       getinverse = getinverse)#
+}#
+#
+# This function computes the inverse of the special “matrix” returned by makeCacheMatrix above. #
+# If the inverse has already been calculated (and the matrix has not changed), #
+# then cacheSolve should retrieve the inverse from the cache.#
+#
+cacheSolve <- function(x, ...) {#
+  ## Return a matrix that is the inverse of 'x'#
+  i <- x$getinverse()#
+  if(!is.null(i)) {#
+    message("getting cached data")#
+    return(i)#
+  }#
+  data <- x$get()#
+  i <- solve(data, ...)#
+  x$setinverse(i)#
+  i#
+}
+# Matrix inversion is usually a costly computation and there may be some benefit#
+# to caching the inverse of a matrix rather than compute it repeatedly. The#
+# following two functions are used to cache the inverse of a matrix.#
+#
+# makeCacheMatrix creates a list containing a function to#
+# 1. set the value of the matrix#
+# 2. get the value of the matrix#
+# 3. set the value of inverse of the matrix#
+# 4. get the value of inverse of the matrix#
+makeCacheMatrix <- function(x = matrix()) {#
+    inv <- NULL#
+    set <- function(y) {#
+        x <<- y#
+        inv <<- NULL#
+    }#
+    get <- function() x#
+    setinverse <- function(inverse) inv <<- inverse#
+    getinverse <- function() inv#
+    list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)#
+}#
+# The following function returns the inverse of the matrix. It first checks if#
+# the inverse has already been computed. If so, it gets the result and skips the#
+# computation. If not, it computes the inverse, sets the value in the cache via#
+# setinverse function.#
+#
+# This function assumes that the matrix is always invertible.#
+cacheSolve <- function(x, ...) {#
+    inv <- x$getinverse()#
+    if(!is.null(inv)) {#
+        message("getting cached data.")#
+        return(inv)#
+    }#
+    data <- x$get()#
+    inv <- solve(data)#
+    x$setinverse(inv)#
+    inv#
+}
+x = rbind(c(1, -1/4), c(-1/4, 1))
+x
+m = makeCacheMatrix(x)
+m
+cacheSolve(m)
+y<=cacheSolve(m)
+y<-cacheSolve(m)
+z<-x*y
+z
+x<-matrix((2,4,6,7),2,2)
+x<-matrix((2,4,6,7),2,2))
+x<-matrix(2,4,6,7)
+x
+x<-matrix((2,4,6,7),nrow=2,ncol=2))
+x<-matrix((2,4,6,7),nrow=2,ncol=2)
+x<-matrix(list(2,4,6,7),nrow=2,ncol=2))
+y<-list92,4,6,7
+y<-list(2,4,6,7)
+y
+x<-matrix(y,nrow=2,ncol=2))
+x<-matrix(y,nrow=2,ncol=2)
+x
+y<-list(4,2,7,6)
+y
+x<-matrix(y,nrow=2,ncol=2)
+x
+m = makeCacheMatrix(x)
+cacheSolve(m)
+y<-(numeric(list(4,2,7,6))
+y
+x<-matrix(y,nrow=2,ncol=2)
+x
+m = makeCacheMatrix(x)
+cacheSolve(m)
+x<-matrix(c(4,2,7,6))
+x
+x<-matrix(c(4,2,7,6),2,2)
+x
+m = makeCacheMatrix(x)
+cacheSolve(m)
+y<-cacheSolve(m)
+x*y
+x%*%y
+x<-matrix(c(1:12), 4,4)
+m = makeCacheMatrix(x)
+cacheSolve(m)
+makeCacheMatrix <- function(x = matrix()) {#
+    i <- NULL#
+  set <- function(y) {#
+          x <<- y#
+          i <<- NULL#
+  }#
+  get <- function() x#
+  setinverse <- function(inverse) i <<- inverse#
+  getinverse <- function() i#
+  list(set = set,#
+       get = get,#
+       setinverse = setinverse,#
+       getinverse = getinverse)#
+}
+cacheSolve <- function(x, ...) {#
+  i <- x$getinverse()#
+  if (!is.null(i)) {#
+          message("getting cached data")#
+          return(i)#
+  }#
+  data <- x$get()#
+  i <- solve(data, ...)#
+  x$setinverse(i)#
+  i#
+}
+x<-matrix(c(1:12), 4,4)
+m = makeCacheMatrix(x)
+cacheSolve(m)
+x
+x = rbind(c(1, -1/4), c(-1/4, 1))
+m = makeCacheMatrix(x)
+cacheSolve(m)
+y<-cacheSolve(m)
+x%*%y
+getwd()
+getwd()
+source("cachematrix.R")
+x = rbind(c(1, -1/4), c(-1/4, 1))
+m = makeCacheMatrix(x)
+y<-cacheSolve(m)
+x%*%y
